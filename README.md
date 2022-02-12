@@ -7,4 +7,5 @@ dwm (dynamic window manager) là một trình quản lý cửa sổ mã nguồn 
 
 ## Credits / Nguồn
 Suckless (dwm): https://dwm.suckless.org/
+
 Arctic Ice Studio (Nord): https://www.nordtheme.com/
