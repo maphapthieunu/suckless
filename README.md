@@ -8,7 +8,7 @@ I modified only the `config.h` library.
 ###### dwm là gì?
 dwm (dynamic window manager) là một trình quản lý cửa sổ **mã nguồn mở, nhanh và nhẹ** cho X.
 ###### Mình đã tùy chỉnh cái gì trong mã nguồn gốc?
-Mỉnh chỉ chỉnh sửa thư viện `config.h` trong đó thôi.
+Mỉnh chỉ chỉnh sửa thư viện `config.h` trong đó.
 
 ## Credits / Nguồn
 Suckless (dwm): https://dwm.suckless.org/
