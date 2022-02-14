@@ -23,7 +23,7 @@ static const char col_ac[]			= "#bf616a";
 static const char *colors[][3]			= {
 	/*               fg      bg      border   */
 	[SchemeNorm] = { col_fg, col_bg, col_bg },
-	[SchemeSel]  = { col_fg, col_ac, col_ac },
+	[SchemeSel]  = { col_ac, col_bg, col_ac },
 };
 
 /* tagging */
