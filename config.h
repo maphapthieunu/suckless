@@ -5,7 +5,7 @@ yay -S nerd-fonts-jetbrains-mono for font
 */
 
 /* appearance */
-static const unsigned int borderpx		= 1;
+static const unsigned int borderpx		= 2;
 static const unsigned int snap			= 0;
 static const unsigned int showsystray		= 1;
 static const unsigned int systraypinning	= 0;
@@ -14,7 +14,7 @@ static const unsigned int systrayspacing	= 2;
 static const unsigned int gappx			= 10;
 static const int systraypinningfailfirst	= 1;
 static const int showbar			= 1;
-static const int topbar				= 0;
+static const int topbar				= 1;
 static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const char col_bg[]			= "#2e3440";
@@ -111,7 +111,6 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
