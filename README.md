@@ -6,6 +6,7 @@ Arctic Ice Studio (Nord): https://www.nordtheme.com/
 ## Patches
 - [autostart](https://dwm.suckless.org/patches/autostart/)
 - [fullgaps](https://dwm.suckless.org/patches/autostart/)
+- [notitle](https://dwm.suckless.org/patches/notitle/)
 - [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
 - [systray](https://dwm.suckless.org/patches/systray/)
 ### [EN]
