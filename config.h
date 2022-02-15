@@ -5,8 +5,8 @@ yay -S nerd-fonts-jetbrains-mono for font
 */
 
 /* appearance */
-static const unsigned int borderpx		= 0;        /* border pixel of windows */
-static const unsigned int snap			= 32;       /* snap pixel */
+static const unsigned int borderpx		= 2;        /* border pixel of windows */
+static const unsigned int snap			= 0;       /* snap pixel */
 static const unsigned int showsystray		= 1;
 static const unsigned int systraypinning	= 0;
 static const unsigned int systrayonleft		= 0;
