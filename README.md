@@ -8,6 +8,7 @@ Arctic Ice Studio (Nord): https://www.nordtheme.com/
 - [fullgaps](https://dwm.suckless.org/patches/autostart/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
 - [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
+- [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
 - [systray](https://dwm.suckless.org/patches/systray/)
 ### [EN]
 - #### What is dwm?
