@@ -10,7 +10,7 @@ static const unsigned int snap			= 0;
 static const unsigned int showsystray		= 1;
 static const unsigned int systraypinning	= 0;
 static const unsigned int systrayonleft		= 1;
-static const unsigned int systrayspacing	= 2;
+static const unsigned int systrayspacing	= ;
 static const unsigned int gappx			= 10;
 static const int systraypinningfailfirst	= 1;
 static const int showbar			= 1;
@@ -19,13 +19,10 @@ static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 0;
-static const char col_bg[]			= "#2e3440";
-static const char col_fg[]			= "#eceff4";
-static const char col_ac[]			= "#bf616a";
 static const char *colors[][3]			= {
 	/*               fg      bg      border   */
-	[SchemeNorm] = { col_fg, col_bg, col_bg },
-	[SchemeSel]  = { col_ac, col_bg, col_ac },
+	[SchemeNorm] = { "#eceff4", "#2e3440", "#2e3440" },
+	[SchemeSel]  = { "#bf616a", "#2e3440", "#bf616a" },
 };
 
 /* tagging */
@@ -66,7 +63,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg, "-sf", col_ac, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", "#2e3440", "-nf", "#eceff4", "-sb", "#2e3440", "-sf", "#bf616a", NULL };
 static const char *termcmd[]  = { "kitty", NULL };
 static const char *fm[]	      = { "thunar", NULL };
 static Key keys[] = {
