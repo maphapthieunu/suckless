@@ -5,7 +5,8 @@ Suckless (dwm): https://dwm.suckless.org/
 Arctic Ice Studio (Nord): https://www.nordtheme.com/
 ## Patches
 - [autostart](https://dwm.suckless.org/patches/autostart/)
-- [fullgaps](https://dwm.suckless.org/patches/autostart/)
+- [fixborders](https://dwm.suckless.org/patches/alpha)
+- [fullgaps](https://dwm.suckless.org/patches/fullgaps/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
 - [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
 - [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
