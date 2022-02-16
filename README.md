@@ -17,6 +17,7 @@ Mỉnh chỉ chỉnh sửa thư viện `config.h` trong đó, và add thêm vài
 - [fixborders](https://dwm.suckless.org/patches/alpha)
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
+- [noborder](https://dwm.suckless.org/patches/noborder/)
 - [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
 - [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
 - [systray](https://dwm.suckless.org/patches/systray/)
