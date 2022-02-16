@@ -17,6 +17,8 @@ static const int showbar			= 1;
 static const int topbar				= 1;
 static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
+static const int horizpadbar			= 2;
+static const int vertpadbar			= 0;
 static const char col_bg[]			= "#2e3440";
 static const char col_fg[]			= "#eceff4";
 static const char col_ac[]			= "#bf616a";
@@ -66,7 +68,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg, "-sf", col_ac, NULL };
 static const char *termcmd[]  = { "kitty", NULL };
-static const char *fm[]	      = { "kitty", "ranger", NULL };
+static const char *fm[]	      = { "thunar", NULL };
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,			XK_d,      spawn,          {.v = dmenucmd } },
