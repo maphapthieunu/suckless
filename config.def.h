@@ -5,7 +5,7 @@ yay -S nerd-fonts-jetbrains-mono for font
 */
 
 /* appearance */
-static const unsigned int borderpx		= 2;
+static const unsigned int borderpx		= 0;
 static const unsigned int snap			= 0;
 static const unsigned int showsystray		= 1;
 static const unsigned int systraypinning	= 0;
