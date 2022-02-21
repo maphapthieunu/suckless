@@ -1,0 +1,6 @@
+# files ends with *.o
+drw.o
+# custom config library
+config.h
+# executable
+dwm
