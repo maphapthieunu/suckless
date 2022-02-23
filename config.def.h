@@ -20,9 +20,9 @@ static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
 static const char *colors[][3]			= {
-	/*               fg      bg      border   */
-	[SchemeNorm] = { "#eceff4", "#2e3440", "#2e3440" },
-	[SchemeSel]  = { "#bf616a", "#2e3440", "#bf616a" },
+	/*               fg         bg         border   */
+	[SchemeNorm] = { "#f8f8f2", "#1e1f29", "#1e1f29" },
+	[SchemeSel]  = { "#725397", "#1e1f29", "#1e1f29" },
 };
 
 /* tagging */
@@ -63,7 +63,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2]			= "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]		= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", "#2e3440", "-nf", "#eceff4", "-sb", "#2e3440", "-sf", "#bf616a", NULL };
+static const char *dmenucmd[]		= { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb #1e1f29 -nf #f8f8f2 -sb #1e1f29 -sf #725e97", NULL };
 static const char *termcmd[]		= { "kitty", NULL };
 static const char *fm[]			= { "thunar", NULL };
 static const char *upvol[]		= { "pactl", "set-sink-volume", "0", "+5%", NULL };
