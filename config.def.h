@@ -18,7 +18,7 @@ static const int topbar				= 1;
 static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
-static const int vertpadbar			= 4;
+static const int vertpadbar			= 6;
 static const char *colors[][3]			= {
 	/*               fg      bg      border   */
 	[SchemeNorm] = { "#eceff4", "#2e3440", "#2e3440" },
