@@ -5,7 +5,7 @@
 - #### What is dwm?
 dwm (dynamic window manager) is a **open source, light and fast** window manager for X.
 - #### What did I modify in the source code?
-I modified only the `config.h` library, and add some patches into the source.
+I modified only the `config.h` library, and add some patches into the source to make it ~~**bloated**~~.
 ### [VI]
 - #### dwm là gì?
 dwm (dynamic window manager) là một trình quản lý cửa sổ **mã nguồn mở, nhanh và nhẹ** cho X.
