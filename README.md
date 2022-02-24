@@ -23,6 +23,5 @@ Mỉnh chỉ chỉnh sửa thư viện `config.h` trong đó, và add thêm vài
 - [systray](https://dwm.suckless.org/patches/systray/)
 
 ## Credits / Nguồn
-Suckless (dwm): https://dwm.suckless.org/
-
-Arctic Ice Studio (Nord): https://www.nordtheme.com/
+Suckless (dwm): https://dwm.suckless.org/   
+Zeno Rocha (Dracula): https://www.draculatheme.com/   
