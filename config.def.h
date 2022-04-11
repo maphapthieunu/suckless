@@ -69,11 +69,11 @@ static const char *fm[]			= { "thunar", NULL };
 static const char *upvol[]		= { "pactl", "set-sink-volume", "0", "+5%", NULL };
 static const char *downvol[]		= { "pactl", "set-sink-volume", "0", "-5%", NULL };
 static const char *mutevol[]		= { "pactl", "set-sink-mute", "0", "toggle", NULL };
-static const char *brightnessup[]	= { "xbacklight", "-inc", "12000", NULL };
-static const char *brightnessdown[]	= { "xbacklight", "-dec", "12000", NULL };
+static const char *brightnessup[]	= { "xbacklight", "-inc", "2", NULL };
+static const char *brightnessdown[]	= { "xbacklight", "-dec", "2", NULL };
 static Key keys[] = {
 	/* modifier                     key				function	argument */
-	{ MODKEY,			XK_d,				spawn,          {.v = dmenucmd } },
+	{ MODKEY,			XK_s,				spawn,          {.v = dmenucmd } },
 	{ MODKEY,			XK_Return,			spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,				togglebar,      {0} },
 	{ Mod1Mask,			XK_Tab,				focusstack,     {.i = +1 } },
