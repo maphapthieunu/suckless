@@ -1,7 +1,7 @@
 ![dwm](dwm.png)
 # Dynamic Window Manager
 
-[Tiếng Việt](https://github.com/xnplz/dwm/blob/master/README.vi.md)
+[🇻🇳 Bản dịch Tiếng Việt](https://github.com/xnplz/dwm/blob/master/README.vi.md)
 
 #### What is dwm?
 dwm (dynamic window manager) is a **open source, light and fast** window manager for X.
