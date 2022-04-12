@@ -63,7 +63,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2]			= "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[]		= { "rofi", "-show", "drun", NULL };
+static const char *rofidrun[]		= { "rofi", "-show", "drun", NULL };
+static const char *rofirun[]		= { "rofi", "-show", "run", NULL };
 static const char *termcmd[]		= { "kitty", NULL };
 static const char *fm[]			= { "thunar", NULL };
 static const char *upvol[]		= { "pactl", "set-sink-volume", "0", "+5%", NULL };
@@ -74,7 +75,8 @@ static const char *brightnessdown[]	= { "xbacklight", "-dec", "2", NULL };
 static const char *settings[]		= { "xfce4-settings-manager", NULL};
 static Key keys[] = {
 	/* modifier                     key				function	argument */
-	{ MODKEY,			XK_s,				spawn,          {.v = dmenucmd } },
+	{ MODKEY,			XK_s,				spawn,          {.v = rofidrun } },
+	{ MODKEY,			XK_r,				spawn,          {.v = rofirun } },
 	{ MODKEY,			XK_Return,			spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,				togglebar,      {0} },
 	{ Mod1Mask,			XK_Tab,				focusstack,     {.i = +1 } },
@@ -91,8 +93,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_m,				setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       XK_space,			setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,			togglefloating, {0} },
-	{ MODKEY,                       XK_0,				view,           {.ui = ~0 } },
-	{ MODKEY|ShiftMask,             XK_0,				tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,			focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period,			focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,			tagmon,         {.i = -1 } },
