@@ -4,7 +4,7 @@
 [🇻🇳 Bản dịch Tiếng Việt](https://github.com/xnplz/dwm/blob/master/README.vi.md)
 
 #### What is dwm?
-dwm (dynamic window manager) is a **open source, light and fast** window manager for X.
+dwm (dynamic window manager) is a **open source, light and fast** window manager for X11.
 #### What did I modify in the source code?
 I modified only the `config.h` library, and add some patches into the source to make it ~~**bloated**~~.
 
