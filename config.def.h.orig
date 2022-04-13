@@ -23,7 +23,6 @@ static const char *colors[][3]			= {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { "#f8f8f2", "#1e1f29", "#1e1f29" },
 	[SchemeSel]  = { "#725397", "#1e1f29", "#1e1f29" },
-	[SchemeHid]  = { "#725397", "#1e1f29", "#725397" },
 };
 
 /* tagging */
@@ -80,10 +79,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_r,				spawn,          {.v = rofirun } },
 	{ MODKEY,			XK_Return,			spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,				togglebar,      {0} },
-	{ Mod1Mask,			XK_j,				focusstackvis,  {.i = +1 } },
-	{ Mod1Mask,			XK_k,				focusstackvis,  {.i = -1 } },
-	{ Mod1Mask|ShiftMask,		XK_j,				focusstackhid,  {.i = +1 } },
-	{ Mod1Mask|ShiftMask,		XK_k,				focusstackhid,  {.i = -1 } },
+	{ Mod1Mask,			XK_Tab,				focusstack,     {.i = +1 } },
+	{ Mod1Mask|ShiftMask,		XK_Tab,				focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_k,				incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_j,				incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,				setmfact,       {.f = -0.05} },
@@ -126,7 +123,6 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
