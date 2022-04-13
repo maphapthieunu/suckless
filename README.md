@@ -18,6 +18,7 @@ I modified only the `config.h` library, and add some patches into the source to 
 - [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
 - [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
 - [systray](https://dwm.suckless.org/patches/systray/)
+- A bit of [colorbar](https://dwm.suckless.org/patches/colorbar/)
 
 ## Credits
 Suckless (dwm): https://dwm.suckless.org/   
