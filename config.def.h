@@ -1,7 +1,6 @@
 /* 
 See LICENSE file for copyright and license details.
-Based on config.def.h lol
-yay -S nerd-fonts-jetbrains-mono for font
+On Arch Linux, install nerd-fonts-jetbrains-mono from AUR for the font.
 */
 
 /* appearance */
@@ -75,48 +74,48 @@ static const char *brightnessup[]	= { "xbacklight", "-inc", "2", NULL };
 static const char *brightnessdown[]	= { "xbacklight", "-dec", "2", NULL };
 static const char *settings[]		= { "xfce4-settings-manager", NULL};
 static Key keys[] = {
-	/* modifier                     key				function	argument */
-	{ MODKEY,			XK_s,				spawn,          {.v = rofidrun } },
-	{ MODKEY,			XK_r,				spawn,          {.v = rofirun } },
-	{ MODKEY,			XK_Return,			spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_b,				togglebar,      {0} },
-	{ Mod1Mask,			XK_j,				focusstackvis,  {.i = +1 } },
-	{ Mod1Mask,			XK_k,				focusstackvis,  {.i = -1 } },
-	{ Mod1Mask|ShiftMask,		XK_j,				focusstackhid,  {.i = +1 } },
-	{ Mod1Mask|ShiftMask,		XK_k,				focusstackhid,  {.i = -1 } },
-	{ MODKEY,                       XK_k,				incnmaster,     {.i = +1 } },
-	{ MODKEY,                       XK_j,				incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,				setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,				setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_g,				zoom,           {0} },
-	{ MODKEY,                       XK_Tab,				view,           {0} },
-	{ Mod1Mask,			XK_F4,				killclient,     {0} },
-	{ MODKEY,                       XK_t,				setlayout,      {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,				setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,				setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,			setlayout,      {0} },
-	{ MODKEY|ShiftMask,             XK_space,			togglefloating, {0} },
-	{ MODKEY,                       XK_comma,			focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period,			focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_comma,			tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_period,			tagmon,         {.i = +1 } },
-	{ MODKEY,			XK_e,				spawn,		{.v = fm } },
-	TAGKEYS(                        XK_1,                      			0)
-	TAGKEYS(                        XK_2,                      			1)
-	TAGKEYS(                        XK_3,                      			2)
-	TAGKEYS(                        XK_4,                      			3)
-	TAGKEYS(                        XK_5,                      			4)
-	TAGKEYS(                        XK_6,                      			5)
-	TAGKEYS(                        XK_7,                      			6)
-	TAGKEYS(                        XK_8,                      			7)
-	TAGKEYS(                        XK_9,                      			8)
-	{ MODKEY|ShiftMask,             XK_e,				quit,		{0} },
-	{ 0,				XF86XK_AudioLowerVolume,	spawn,		{.v = downvol } },
-	{ 0,				XF86XK_AudioRaiseVolume,	spawn,		{.v = upvol } },
-	{ 0,				XF86XK_AudioMute,		spawn,		{.v = mutevol } },
-	{ 0,				XF86XK_MonBrightnessUp,		spawn,		{.v = brightnessup } },
-	{ 0,				XF86XK_MonBrightnessDown,	spawn,		{.v = brightnessdown } },
-	{ MODKEY,			XK_i,				spawn,		{.v = settings } },
+	/* modifier                     	key				function	argument */
+	{ MODKEY,				XK_s,				spawn,          {.v = rofidrun } },
+	{ MODKEY,				XK_r,				spawn,          {.v = rofirun } },
+	{ MODKEY,				XK_Return,			spawn,          {.v = termcmd } },
+	{ MODKEY,                       	XK_b,				togglebar,      {0} },
+	{ Mod1Mask,				XK_Tab,				focusstackvis,  {.i = +1 } },
+	{ Mod1Mask|ShiftMask,			XK_Tab,				focusstackvis,  {.i = -1 } },
+	{ Mod1Mask|ControlMask,			XK_Tab,				focusstackhid,  {.i = +1 } },
+	{ Mod1Mask|ControlMask|ShiftMask,	XK_Tab,				focusstackhid,  {.i = -1 } },
+	{ MODKEY,                       	XK_k,				incnmaster,     {.i = +1 } },
+	{ MODKEY,                       	XK_j,				incnmaster,     {.i = -1 } },
+	{ MODKEY,                       	XK_h,				setmfact,       {.f = -0.05} },
+	{ MODKEY,                       	XK_l,				setmfact,       {.f = +0.05} },
+	{ MODKEY,                       	XK_g,				zoom,           {0} },
+	{ MODKEY,                       	XK_Tab,				view,           {0} },
+	{ Mod1Mask,				XK_F4,				killclient,     {0} },
+	{ MODKEY,                       	XK_t,				setlayout,      {.v = &layouts[0]} },
+	{ MODKEY,                       	XK_f,				setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       	XK_m,				setlayout,      {.v = &layouts[2]} },
+	{ MODKEY,                       	XK_space,			setlayout,      {0} },
+	{ MODKEY|ShiftMask,             	XK_space,			togglefloating, {0} },
+	{ MODKEY,                       	XK_comma,			focusmon,       {.i = -1 } },
+	{ MODKEY,                       	XK_period,			focusmon,       {.i = +1 } },
+	{ MODKEY|ShiftMask,             	XK_comma,			tagmon,         {.i = -1 } },
+	{ MODKEY|ShiftMask,             	XK_period,			tagmon,         {.i = +1 } },
+	{ MODKEY,				XK_e,				spawn,		{.v = fm } },
+	TAGKEYS(                        	XK_1,                      			0)
+	TAGKEYS(                        	XK_2,                      			1)
+	TAGKEYS(                        	XK_3,                      			2)
+	TAGKEYS(                        	XK_4,                      			3)
+	TAGKEYS(                        	XK_5,                      			4)
+	TAGKEYS(                        	XK_6,                      			5)
+	TAGKEYS(                        	XK_7,                      			6)
+	TAGKEYS(                        	XK_8,                      			7)
+	TAGKEYS(                        	XK_9,                      			8)
+	{ MODKEY|ShiftMask,             	XK_e,				quit,		{0} },
+	{ 0,					XF86XK_AudioLowerVolume,	spawn,		{.v = downvol } },
+	{ 0,					XF86XK_AudioRaiseVolume,	spawn,		{.v = upvol } },
+	{ 0,					XF86XK_AudioMute,		spawn,		{.v = mutevol } },
+	{ 0,					XF86XK_MonBrightnessUp,		spawn,		{.v = brightnessup } },
+	{ 0,					XF86XK_MonBrightnessDown,	spawn,		{.v = brightnessdown } },
+	{ MODKEY,				XK_i,				spawn,		{.v = settings } },
 };
 
 /* button definitions */
@@ -135,4 +134,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
-
