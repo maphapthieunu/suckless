@@ -19,11 +19,10 @@ static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
 static const char *colors[][3]			= {
-	/*                 fg         bg         border   */
-	[SchemeNorm]   = { "#725397", "#1e1f29", "#1e1f29" },
-	[SchemeSel]    = { "#f8f8f2", "#1e1f29", "#1e1f29" },
-	[SchemeHid]    = { "#725397", "#1e1f29", "#1e1f29" },
-	[SchemeStatus] = { "#f8f8f2", "#1e1f29", "#1e1f29" },
+	/*               fg         bg         border   */
+	[SchemeNorm] = { "#f8f8f2", "#1e1f29", "#1e1f29" },
+	[SchemeSel]  = { "#725397", "#1e1f29", "#1e1f29" },
+	[SchemeHid]  = { "#725397", "#1e1f29", "#725397" },
 };
 
 /* tagging */
