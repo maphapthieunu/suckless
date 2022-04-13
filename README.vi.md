@@ -10,6 +10,7 @@ Mỉnh chỉ chỉnh sửa thư viện `config.h` trong đó, và add thêm vài
 
 ## Patches
 - [autostart](https://dwm.suckless.org/patches/autostart/)
+- [awesomebar](https://dwm.suckless.org/patches/awesomebar/)
 - [fixborders](https://dwm.suckless.org/patches/alpha)
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
