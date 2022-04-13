@@ -10,6 +10,7 @@ I modified only the `config.h` library, and add some patches into the source to 
 
 ## Patches
 - [autostart](https://dwm.suckless.org/patches/autostart/)
+- [awesomebar](https://dwm.suckless.org/patches/awesomebar/)
 - [fixborders](https://dwm.suckless.org/patches/alpha)
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/)
 - [notitle](https://dwm.suckless.org/patches/notitle/)
