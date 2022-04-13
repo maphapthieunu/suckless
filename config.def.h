@@ -78,6 +78,10 @@ static Key keys[] = {
 	{ MODKEY,				XK_s,				spawn,          {.v = rofidrun } },
 	{ MODKEY,				XK_r,				spawn,          {.v = rofirun } },
 	{ MODKEY,				XK_Return,			spawn,          {.v = termcmd } },
+	{ MODKEY,				XK_e,				spawn,		{.v = fm } },
+	{ MODKEY,				XK_i,				spawn,		{.v = settings } },
+	{ Mod1Mask,				XK_m,				hide,		{0} },
+	{ Mod1Mask|ShiftMask,			XK_m,				show,		{0} },
 	{ MODKEY,                       	XK_b,				togglebar,      {0} },
 	{ Mod1Mask,				XK_Tab,				focusstackvis,  {.i = +1 } },
 	{ Mod1Mask|ShiftMask,			XK_Tab,				focusstackvis,  {.i = -1 } },
@@ -99,7 +103,6 @@ static Key keys[] = {
 	{ MODKEY,                       	XK_period,			focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             	XK_comma,			tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             	XK_period,			tagmon,         {.i = +1 } },
-	{ MODKEY,				XK_e,				spawn,		{.v = fm } },
 	TAGKEYS(                        	XK_1,                      			0)
 	TAGKEYS(                        	XK_2,                      			1)
 	TAGKEYS(                        	XK_3,                      			2)
@@ -115,7 +118,6 @@ static Key keys[] = {
 	{ 0,					XF86XK_AudioMute,		spawn,		{.v = mutevol } },
 	{ 0,					XF86XK_MonBrightnessUp,		spawn,		{.v = brightnessup } },
 	{ 0,					XF86XK_MonBrightnessDown,	spawn,		{.v = brightnessdown } },
-	{ MODKEY,				XK_i,				spawn,		{.v = settings } },
 };
 
 /* button definitions */
