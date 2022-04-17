@@ -74,6 +74,7 @@ static const char *mutevol[]		= { "pactl", "set-sink-mute", "0", "toggle", NULL 
 static const char *brightnessup[]	= { "xbacklight", "-inc", "2", NULL };
 static const char *brightnessdown[]	= { "xbacklight", "-dec", "2", NULL };
 static const char *settings[]		= { "xfce4-settings-manager", NULL};
+static const char *powermenu[]		= { "rofi", "-show", "p", "-modi", "p:pm:", NULL };
 static Key keys[] = {
 	/* modifier                     	key				function	argument */
 	{ MODKEY,				XK_s,				spawn,          {.v = rofidrun } },
@@ -119,6 +120,7 @@ static Key keys[] = {
 	{ 0,					XF86XK_AudioMute,		spawn,		{.v = mutevol } },
 	{ 0,					XF86XK_MonBrightnessUp,		spawn,		{.v = brightnessup } },
 	{ 0,					XF86XK_MonBrightnessDown,	spawn,		{.v = brightnessdown } },
+	{ ControlMask|Mod1Mask,			XK_Delete,			spawn,		{.v = powermenu } },
 };
 
 /* button definitions */
