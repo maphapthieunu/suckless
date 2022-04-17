@@ -74,7 +74,7 @@ static const char *mutevol[]		= { "pactl", "set-sink-mute", "0", "toggle", NULL 
 static const char *brightnessup[]	= { "xbacklight", "-inc", "2", NULL };
 static const char *brightnessdown[]	= { "xbacklight", "-dec", "2", NULL };
 static const char *settings[]		= { "xfce4-settings-manager", NULL};
-static const char *powermenu[]		= { "rofi", "-show", "p", "-modi", "p:pm:", NULL };
+static const char *powermenu[]		= { "rofi", "-show", "p", "-modi", "p:~/.local/bin/pm", NULL };
 static Key keys[] = {
 	/* modifier                     	key				function	argument */
 	{ MODKEY,				XK_s,				spawn,          {.v = rofidrun } },
