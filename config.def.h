@@ -14,7 +14,7 @@ static const unsigned int gappx			= 10;
 static const int systraypinningfailfirst	= 1;
 static const int showbar			= 1;
 static const int topbar				= 1;
-static const char *fonts[]			= { "JetBrains Mono Regular:size=10" };
+static const char *fonts[]			= { "JetBrains Mono:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
 static const char *colors[][3]			= {
@@ -141,19 +141,19 @@ static const int scrollargs[][2] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkWinTitle,          0,              Button1,        togglewin,      {0} },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-	{ ClkClientWin,         MODKEY,         Button4,        resizemousescroll, {.v = &scrollargs[0]} },
-	{ ClkClientWin,         MODKEY,         Button5,        resizemousescroll, {.v = &scrollargs[1]} },
-	{ ClkClientWin,         MODKEY,         Button6,        resizemousescroll, {.v = &scrollargs[2]} },
-	{ ClkClientWin,         MODKEY,         Button7,        resizemousescroll, {.v = &scrollargs[3]} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkTagBar,            MODKEY,         Button1,        tag,            	{0} },
+	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      	{0} },
+	{ ClkStatusText,        0,              Button2,        spawn,          	{.v = termcmd } },
+	{ ClkWinTitle,          0,              Button1,        togglewin,      	{0} },
+	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      	{0} },
+	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, 	{0} },
+	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    	{0} },
+	{ ClkClientWin,         MODKEY,         Button4,        resizemousescroll,	{.v = &scrollargs[0]} },
+	{ ClkClientWin,         MODKEY,         Button5,        resizemousescroll,	{.v = &scrollargs[1]} },
+	{ ClkClientWin,         MODKEY,         Button6,        resizemousescroll,	{.v = &scrollargs[2]} },
+	{ ClkClientWin,         MODKEY,         Button7,        resizemousescroll,	{.v = &scrollargs[3]} },
+	{ ClkTagBar,            0,              Button1,        view,           	{0} },
+	{ ClkTagBar,            0,              Button3,        toggleview,     	{0} },
+	{ ClkTagBar,            MODKEY,         Button1,        tag,            	{0} },
+	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      	{0} },
 };
