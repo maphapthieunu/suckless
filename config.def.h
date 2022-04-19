@@ -73,8 +73,9 @@ static const char *downvol[]		= { "pactl", "set-sink-volume", "0", "-5%", NULL }
 static const char *mutevol[]		= { "pactl", "set-sink-mute", "0", "toggle", NULL };
 static const char *brightnessup[]	= { "xbacklight", "-inc", "2", NULL };
 static const char *brightnessdown[]	= { "xbacklight", "-dec", "2", NULL };
-static const char *settings[]		= { "xfce4-settings-manager", NULL};
+static const char *settings[]		= { "xfce4-settings-manager", NULL };
 static const char *powermenu[]		= { "rofi", "-show", "p", "-modi", "p:~/.local/bin/pm", NULL };
+static const char *emoji[]		= { "ibus", "emoji", NULL };
 static Key keys[] = {
 	/* modifier                     	key				function	argument */
 	{ MODKEY,				XK_s,				spawn,          {.v = rofidrun } },
@@ -82,6 +83,8 @@ static Key keys[] = {
 	{ MODKEY,				XK_Return,			spawn,          {.v = termcmd } },
 	{ MODKEY,				XK_e,				spawn,		{.v = fm } },
 	{ MODKEY,				XK_i,				spawn,		{.v = settings } },
+	{ MODKEY,				XK_semicolon,			spawn,		{.v = emoji } },
+	{ MODKEY,				XK_period,			spawn,		{.v = emoji } },
 	{ Mod1Mask,				XK_m,				hide,		{0} },
 	{ Mod1Mask|ShiftMask,			XK_m,				show,		{0} },
 	{ MODKEY,                       	XK_b,				togglebar,      {0} },
@@ -102,9 +105,9 @@ static Key keys[] = {
 	{ MODKEY,                       	XK_space,			setlayout,      {0} },
 	{ MODKEY|ShiftMask,             	XK_space,			togglefloating, {0} },
 	{ MODKEY,                       	XK_comma,			focusmon,       {.i = -1 } },
-	{ MODKEY,                       	XK_period,			focusmon,       {.i = +1 } },
+	{ MODKEY,                       	XK_slash,			focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             	XK_comma,			tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,             	XK_period,			tagmon,         {.i = +1 } },
+	{ MODKEY|ShiftMask,             	XK_slash,			tagmon,         {.i = +1 } },
 	TAGKEYS(                        	XK_1,                      			0)
 	TAGKEYS(                        	XK_2,                      			1)
 	TAGKEYS(                        	XK_3,                      			2)
