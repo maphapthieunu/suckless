@@ -14,8 +14,7 @@ static const unsigned int gappx			= 10;
 static const int systraypinningfailfirst	= 1;
 static const int showbar			= 1;
 static const int topbar				= 1;
-static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
-static const char dmenufont[]			= { "JetBrainsMono Nerd Font:size=10" };
+static const char *fonts[]			= { "JetBrains Mono Regular:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
 static const char *colors[][3]			= {
