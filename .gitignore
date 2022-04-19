@@ -1,7 +1,13 @@
-# files ends with *.o
+# files ends with .o
 drw.o
 dwm.o
 util.o
+# files ends with .rej
+config.def.h.rej
+dwm.c.rej
+# files ends with .orig
+config.def.h.orig
+dwm.c.orig
 # custom config library
 config.h
 # executable
