@@ -11,15 +11,17 @@ I modified only the `config.h` library, and add some patches into the source to 
 ## Patches
 - [autostart](https://dwm.suckless.org/patches/autostart/)
 - [awesomebar](https://dwm.suckless.org/patches/awesomebar/)
+- [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/)
 - [fixborders](https://dwm.suckless.org/patches/alpha)
 - [fullgaps](https://dwm.suckless.org/patches/fullgaps/)
-- [notitle](https://dwm.suckless.org/patches/notitle/)
 - [noborder](https://dwm.suckless.org/patches/noborder/)
+- [notitle](https://dwm.suckless.org/patches/notitle/)
 - [resizecorners](https://dwm.suckless.org/patches/resizecorners/)
 - [statuspadding](https://dwm.suckless.org/patches/statuspadding/)
 - [systray](https://dwm.suckless.org/patches/systray/)
+- [underlinetags](https://dwm.suckless.org/patches/underlinetags/)
+- Not working [barpadding](https://dwm.suckless.org/patches/barpadding/)
 - A bit of [colorbar](https://dwm.suckless.org/patches/colorbar/)
 
 ## Credits
 Suckless (dwm): https://dwm.suckless.org/   
-Zeno Rocha (Dracula): https://www.draculatheme.com/   
