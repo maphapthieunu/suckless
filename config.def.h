@@ -13,20 +13,27 @@ static const unsigned int systrayspacing	= 4;
 static const unsigned int gappx			= 10;
 static const int systraypinningfailfirst	= 1;
 static const int showbar			= 1;
-static const int topbar				= 1;
-static const char *fonts[]			= { "JetBrains Mono:size=10" };
+static const int topbar				= 0;
+static const int vertpad			= 10;
+static const int sidepad			= 10;
+static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
 static const char *colors[][3]			= {
 	/*                 fg         bg         border   */
-	[SchemeNorm]   = { "#725397", "#1e1f29", "#1e1f29" },
-	[SchemeSel]    = { "#f8f8f2", "#1e1f29", "#1e1f29" },
-	[SchemeHid]    = { "#725397", "#1e1f29", "#1e1f29" },
-	[SchemeStatus] = { "#f8f8f2", "#1e1f29", "#1e1f29" },
+	[SchemeNorm]   = { "#cfb9b6", "#1e1f29", "#516eb0" },
+	[SchemeSel]    = { "#ffe4e0", "#1e1f29", "#6fc0f2" },
+	[SchemeHid]    = { "#cfb9b6", "#1e1f29", "#516eb0" },
+	[SchemeStatus] = { "#ffe4e0", "#222026", "#222026" },
 };
 
 /* tagging */
 static const char *tags[] = { "ﲾ", "", "ﭮ", "", "", "" };
+
+static const unsigned int ulinepad	= 0;	/* horizontal padding between the underline and tag */
+static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
+static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
+static const int ulineall 		= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -40,7 +47,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
 /* mouse scroll resize */
@@ -103,7 +110,7 @@ static Key keys[] = {
 	{ Mod1Mask,				XK_F4,				killclient,     {0} },
 	{ MODKEY,                       	XK_t,				setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       	XK_f,				setlayout,      {.v = &layouts[1]} },
-	{ MODKEY,                       	XK_m,				setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|Mod1Mask,                     	XK_m,				setlayout,      {.v = &layouts[2]} },
 	{ MODKEY,                       	XK_space,			setlayout,      {0} },
 	{ MODKEY|ShiftMask,             	XK_space,			togglefloating, {0} },
 	{ MODKEY,                       	XK_comma,			focusmon,       {.i = -1 } },
