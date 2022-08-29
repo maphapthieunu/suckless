@@ -4,7 +4,7 @@ On Arch Linux, install nerd-fonts-jetbrains-mono from AUR for the font.
 */
 
 /* appearance */
-static const unsigned int borderpx		= 0;
+static const unsigned int borderpx		= 2;
 static const unsigned int snap			= 0;
 static const unsigned int showsystray		= 1;
 static const unsigned int systraypinning	= 0;
@@ -13,18 +13,24 @@ static const unsigned int systrayspacing	= 4;
 static const unsigned int gappx			= 10;
 static const int systraypinningfailfirst	= 1;
 static const int showbar			= 1;
-static const int topbar				= 0;
-static const int vertpad			= 10;
-static const int sidepad			= 10;
+static const int topbar				= 1;
+static int vp					= 10;
+static int sp					= 10;
 static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
+static const unsigned int baralpha 		= 0xd0;
+static const unsigned int borderalpha		= OPAQUE;
 static const char *colors[][3]			= {
-	/*                 fg         bg         border   */
-	[SchemeNorm]   = { "#cfb9b6", "#1e1f29", "#516eb0" },
-	[SchemeSel]    = { "#ffe4e0", "#1e1f29", "#6fc0f2" },
-	[SchemeHid]    = { "#cfb9b6", "#1e1f29", "#516eb0" },
-	[SchemeStatus] = { "#ffe4e0", "#222026", "#222026" },
+	/*               fg         bg         border   */
+	[SchemeNorm] = { "#e0d4d0", "#0c0c0c", "#c0594b" },
+	[SchemeSel]  = { "#fffaf5", "#0c0c0c", "#ff6650" },
+};
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
 /* tagging */
@@ -55,9 +61,9 @@ static const int scrollsensetivity = 30; /* 1 means resize window by 1 pixel for
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[T]",      tile },    /* first entry is default */
-	{ "[F]",      NULL },    /* no layout function means floating behavior */
-	{ "[M]",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	{ "",      monocle },
 };
 
 /* key definitions */
@@ -94,13 +100,9 @@ static Key keys[] = {
 	{ MODKEY,				XK_i,				spawn,		{.v = settings } },
 	{ MODKEY,				XK_semicolon,			spawn,		{.v = emoji } },
 	{ MODKEY,				XK_period,			spawn,		{.v = emoji } },
-	{ Mod1Mask,				XK_m,				hide,		{0} },
-	{ Mod1Mask|ShiftMask,			XK_m,				show,		{0} },
 	{ MODKEY,                       	XK_b,				togglebar,      {0} },
-	{ Mod1Mask,				XK_Tab,				focusstackvis,  {.i = +1 } },
-	{ Mod1Mask|ShiftMask,			XK_Tab,				focusstackvis,  {.i = -1 } },
-	{ Mod1Mask|ControlMask,			XK_Tab,				focusstackhid,  {.i = +1 } },
-	{ Mod1Mask|ControlMask|ShiftMask,	XK_Tab,				focusstackhid,  {.i = -1 } },
+	{ Mod1Mask,				XK_Tab,				focusstack,     {.i = +1 } },
+	{ Mod1Mask|ShiftMask,			XK_Tab,				focusstack,     {.i = -1 } },
 	{ MODKEY,                       	XK_k,				incnmaster,     {.i = +1 } },
 	{ MODKEY,                       	XK_j,				incnmaster,     {.i = -1 } },
 	{ MODKEY,                       	XK_h,				setmfact,       {.f = -0.05} },
@@ -151,14 +153,9 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            	{0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      	{0} },
 	{ ClkStatusText,        0,              Button2,        spawn,          	{.v = termcmd } },
-	{ ClkWinTitle,          0,              Button1,        togglewin,      	{0} },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      	{0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, 	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    	{0} },
-	{ ClkClientWin,         MODKEY,         Button4,        resizemousescroll,	{.v = &scrollargs[0]} },
-	{ ClkClientWin,         MODKEY,         Button5,        resizemousescroll,	{.v = &scrollargs[1]} },
-	{ ClkClientWin,         MODKEY,         Button6,        resizemousescroll,	{.v = &scrollargs[2]} },
-	{ ClkClientWin,         MODKEY,         Button7,        resizemousescroll,	{.v = &scrollargs[3]} },
 	{ ClkTagBar,            0,              Button1,        view,           	{0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     	{0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            	{0} },

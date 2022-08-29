@@ -51,4 +51,7 @@ uninstall:
 		${DESTDIR}${MANPREFIX}/man1/dwm.1\
 		/usr/share/xsessions/dwm.desktop
 
-.PHONY: all options clean dist install uninstall
+def:
+	rm -f config.h
+
+.PHONY: all options clean dist install uninstall def
