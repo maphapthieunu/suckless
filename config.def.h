@@ -34,7 +34,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "ﲾ", "", "ﭮ", "", "", "" };
+static const char *tags[] = { "ﲾ", "", "ﭮ", "", "", "", "" };
 
 static const unsigned int ulinepad	= 0;	/* horizontal padding between the underline and tag */
 static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
