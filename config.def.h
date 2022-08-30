@@ -19,8 +19,6 @@ static int sp					= 10;
 static const char *fonts[]			= { "JetBrainsMono Nerd Font:size=10" };
 static const int horizpadbar			= 2;
 static const int vertpadbar			= 8;
-static const unsigned int baralpha 		= 0xd0;
-static const unsigned int borderalpha		= OPAQUE;
 static const char *colors[][3]			= {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { "#e0d4d0", "#0c0c0c", "#c0594b" },
@@ -28,9 +26,9 @@ static const char *colors[][3]			= {
 };
 
 static const unsigned int alphas[][3]      = {
-	/*               fg      bg        border     */
-	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+	/*               fg      bg      border */
+	[SchemeNorm] = { OPAQUE, OPAQUE, OPAQUE },
+	[SchemeSel]  = { OPAQUE, OPAQUE, OPAQUE },
 };
 
 /* tagging */
