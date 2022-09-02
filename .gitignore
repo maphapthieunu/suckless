@@ -1,14 +1,13 @@
 # files ends with .o
-drw.o
-dwm.o
-util.o
-# files ends with .rej
-config.def.h.rej
-dwm.c.rej
-# files ends with .orig
-config.def.h.orig
-dwm.c.orig
+dwm/drw.o
+dwm/dwm.o
+dwm/util.o
+# patches moment
+dwm/config.def.h.rej
+dwm/dwm.c.rej
+dwm/config.def.h.orig
+dwm/dwm.c.orig
 # custom config library
-config.h
+dwm/config.h
 # executable
-dwm
+dwm/dwm

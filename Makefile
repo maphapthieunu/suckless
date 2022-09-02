@@ -1,15 +1,18 @@
-# dwm - dynamic window manager
-# See LICENSE file for copyright and license details.
+# s1stine's suckless fork installer
+# provides dwm and dwmblocks
+
+# See LICENSE file in each folders for copyright and license details.
 
 include config.mk
 
-SRC = drw.c dwm.c util.c
+SRC = dwm/drw.c dwm/dwm.c dwm/util.c
 OBJ = ${SRC:.c=.o}
+# OBJ = drw.o dwm.o util.o
 
-all: options dwm
+all: options dwm dwmblocks
 
 options:
-	@echo dwm build options:
+	@echo dwm and dwmblocks build options:
 	@echo "CFLAGS   = ${CFLAGS}"
 	@echo "LDFLAGS  = ${LDFLAGS}"
 	@echo "CC       = ${CC}"
@@ -20,13 +23,18 @@ options:
 ${OBJ}: config.h config.mk
 
 config.h:
-	cp config.def.h $@
+	cp dwm/config.def.h dwm/config.h
+	cp dwmblocks/blocks.def.h dwmblocks/blocks.h
 
 dwm: ${OBJ}
-	${CC} -o $@ ${OBJ} ${LDFLAGS}
+	mv *.o dwm
+	${CC} -o $@/$@ ${OBJ} ${LDFLAGS}
+
+dwmblocks: ${OBJ}
+	${CC} -o $@/$@ ${OBJ} ${LDFLAGS}
 
 clean:
-	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
+	rm -f *.gch dwmblocks/dwmblocks dwm/dwm ${OBJ} dwm-${VERSION}.tar.gz
 
 dist: clean
 	mkdir -p dwm-${VERSION}
@@ -38,20 +46,24 @@ dist: clean
 
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
-	cp -f dwm ${DESTDIR}${PREFIX}/bin
+	cp -f dwm/dwm ${DESTDIR}${PREFIX}/bin
+	cp -f dwmblocks/dwmblocks ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
-	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
+	sed "s/VERSION/${VERSION}/g" < dwm/dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
-	cp -f dwm.desktop /usr/share/xsessions
+	cp -f dwm/dwm.desktop /usr/share/xsessions
 	chmod 755 /usr/share/xsessions/dwm.desktop
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
 		${DESTDIR}${MANPREFIX}/man1/dwm.1\
-		/usr/share/xsessions/dwm.desktop
+		/usr/share/xsessions/dwm.desktop\
+		${DESTDIR}${PREFIX}/bin/dwmblocks
 
 def:
-	rm -f config.h
+	rm -f dwm/config.h
+	rm -f dwmblocks/blocks.h
 
 .PHONY: all options clean dist install uninstall def
